@@ -105,7 +105,7 @@ vendor_modify_jars := android.policy framework framework2 oppo-framework pm serv
 # The command idtoname how to use: first use "apktool d source/system/framework/framework-res.apk other/TMP/framework-res",
 # and then use "idtoname other/TMP/framework-res/res/values/public_master.xml XXXX/smali"(XXXX is the directory where you decode baidu system apk).
 #-----------------------------------------------------------------------------
-baidu_modify_apps := Keyguard
+baidu_modify_apps := Keyguard SystemUI TeleService
 
 ##############################################################################
 # The value decides which jar you want to modify, when the jar is based on the baidu framework jar.
