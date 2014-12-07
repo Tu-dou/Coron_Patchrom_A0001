@@ -1,0 +1,11 @@
+.field private mIColorOSKeyguardService:Lcom/android/internal/policy/IColorOSKeyguardService;
+
+.method setColorOSKeyguardService(Lcom/android/internal/policy/IColorOSKeyguardService;)V
+    .locals 0
+    .parameter "callback"
+
+    .prologue
+    iput-object p1, p0, Lcom/android/keyguard/KeyguardViewMediator;->mIColorOSKeyguardService:Lcom/android/internal/policy/IColorOSKeyguardService;
+
+    return-void
+.end method

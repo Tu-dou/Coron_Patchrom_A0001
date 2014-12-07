@@ -1,0 +1,20 @@
+.method public setColorOSKeyguardService(Lcom/android/internal/policy/IColorOSKeyguardService;)V
+    .locals 1
+    .parameter "callback"
+
+    .prologue
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardService$1;->this$0:Lcom/android/keyguard/KeyguardService;
+
+    invoke-virtual {v0}, Lcom/android/keyguard/KeyguardService;->checkPermission()V
+
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardService$1;->this$0:Lcom/android/keyguard/KeyguardService;
+
+    #getter for: Lcom/android/keyguard/KeyguardService;->mKeyguardViewMediator:Lcom/android/keyguard/KeyguardViewMediator;
+    invoke-static {v0}, Lcom/android/keyguard/KeyguardService;->access$000(Lcom/android/keyguard/KeyguardService;)Lcom/android/keyguard/KeyguardViewMediator;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/android/keyguard/KeyguardViewMediator;->setColorOSKeyguardService(Lcom/android/internal/policy/IColorOSKeyguardService;)V
+
+    return-void
+.end method
