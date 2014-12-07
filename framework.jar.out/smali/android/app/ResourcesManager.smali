@@ -170,6 +170,10 @@
     .end annotation
 
     .prologue
+    const/4 v10, 0x0
+
+    sput v10, Landroid/app/ActivityThread$BaiduInjector;->sMultiThemeChanges:I
+
     const/4 v11, 0x1
 
     const/4 v12, 0x0
@@ -416,6 +420,8 @@
     .end local v7           #key:Landroid/content/res/ResourcesKey;
     .end local v8           #r:Landroid/content/res/Resources;
     :cond_c
+    sput v0, Landroid/app/ActivityThread$BaiduInjector;->sMultiThemeChanges:I
+
     if-eqz v0, :cond_d
 
     :goto_4
@@ -777,35 +783,29 @@
 
     if-eqz v3, :cond_1
 
-    .line 173
     monitor-exit p0
 
     move-object v11, v14
 
-    .line 230
     :goto_1
     return-object v11
 
-    .line 166
     .end local v14           #r:Landroid/content/res/Resources;
     :cond_0
     const/4 v14, 0x0
 
     goto :goto_0
 
-    .line 175
     .restart local v14       #r:Landroid/content/res/Resources;
     :cond_1
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 182
-    new-instance v8, Landroid/content/res/AssetManager;
+    new-instance v8, Landroid/content/res/BaiduAssetManager;
 
-    invoke-direct {v8}, Landroid/content/res/AssetManager;-><init>()V
+    invoke-direct {v8}, Landroid/content/res/BaiduAssetManager;-><init>()V
 
-    .line 183
     .local v8, assets:Landroid/content/res/AssetManager;
     move-object/from16 v0, p1
 

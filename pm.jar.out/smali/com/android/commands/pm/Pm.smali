@@ -1107,19 +1107,16 @@
 
     move-result-object v0
 
-    .line 1452
     .local v0, ai:Landroid/content/pm/ApplicationInfo;
-    new-instance v1, Landroid/content/res/AssetManager;
+    new-instance v1, Landroid/content/res/BaiduAssetManager;
 
-    invoke-direct {v1}, Landroid/content/res/AssetManager;-><init>()V
+    invoke-direct {v1}, Landroid/content/res/BaiduAssetManager;-><init>()V
 
-    .line 1453
     .local v1, am:Landroid/content/res/AssetManager;
     iget-object v5, v0, Landroid/content/pm/ApplicationInfo;->publicSourceDir:Ljava/lang/String;
 
     invoke-virtual {v1, v5}, Landroid/content/res/AssetManager;->addAssetPath(Ljava/lang/String;)I
 
-    .line 1460
     const/4 v5, 0x0
 
     const/4 v6, 0x0
@@ -1128,12 +1125,10 @@
 
     move-result-object v3
 
-    .line 1461
     iget-object v5, p1, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->init(Ljava/lang/String;)V
 
-    .line 1463
     iget-object v5, p0, Lcom/android/commands/pm/Pm;->mResourceCache:Ljava/util/WeakHashMap;
 
     iget-object v6, p1, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;

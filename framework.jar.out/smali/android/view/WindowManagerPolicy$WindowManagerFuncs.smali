@@ -57,3 +57,6 @@
 
 .method public abstract unregisterPointerEventListener(Landroid/view/WindowManagerPolicy$PointerEventListener;)V
 .end method
+
+.method public abstract reboot(Z)V
+.end method

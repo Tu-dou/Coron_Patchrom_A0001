@@ -547,7 +547,7 @@
     return p1
 .end method
 
-.method static synthetic access$102(Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;Z)Z
+.method static synthetic access$002(Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;Z)Z
     .locals 0
     .parameter "x0"
     .parameter "x1"
@@ -982,7 +982,7 @@
 
     move-result-object v7
 
-    const v8, 0x107002d
+    const v8, #android:array@config_operatorConsideredNonRoaming#t
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -1061,7 +1061,7 @@
 
     move-result-object v7
 
-    const v8, 0x107002e
+    const v8, #android:array@config_sameNamedOperatorConsideredRoaming#t
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -8250,7 +8250,7 @@
 
     move-result-object v13
 
-    const v14, 0x111003f
+    const v14, #android:bool@skip_restoring_network_selection#t
 
     invoke-virtual {v13, v14}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -9788,7 +9788,7 @@
 
     move-result-object v19
 
-    const v20, 0x111003a
+    const v20, #android:bool@config_voice_capable#t
 
     invoke-virtual/range {v19 .. v20}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -10999,7 +10999,7 @@
 
     move-result-object v14
 
-    const v15, 0x104030c
+    const v15, #android:string@lockscreen_carrier_default#t
 
     invoke-virtual {v14, v15}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 

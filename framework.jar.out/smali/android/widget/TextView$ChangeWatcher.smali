@@ -93,7 +93,7 @@
     iget-object v0, p0, Landroid/widget/TextView$ChangeWatcher;->this$0:Landroid/widget/TextView;
 
     #getter for: Landroid/widget/TextView;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Landroid/widget/TextView;->access$500(Landroid/widget/TextView;)Landroid/content/Context;
+    invoke-static {v0}, Landroid/widget/TextView;->access$1100(Landroid/widget/TextView;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -366,7 +366,7 @@
     iget-object v1, p0, Landroid/widget/TextView$ChangeWatcher;->this$0:Landroid/widget/TextView;
 
     #getter for: Landroid/widget/TextView;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Landroid/widget/TextView;->access$1500(Landroid/widget/TextView;)Landroid/content/Context;
+    invoke-static {v1}, Landroid/widget/TextView;->access$1100(Landroid/widget/TextView;)Landroid/content/Context;
 
     move-result-object v1
 

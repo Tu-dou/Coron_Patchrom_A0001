@@ -6,7 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/server/power/ShutdownThread$CloseDialogReceiver;
+        Lcom/android/server/power/ShutdownThread$CloseDialogReceiver;,
+        Lcom/android/server/power/ShutdownThread$BaiduInjector;
     }
 .end annotation
 
@@ -184,12 +185,10 @@
 
     iput-object v1, v2, Lcom/android/server/power/ShutdownThread;->mPowerManager:Landroid/os/PowerManager;
 
-    .line 281
     sget-object v1, Lcom/android/server/power/ShutdownThread;->sInstance:Lcom/android/server/power/ShutdownThread;
 
     iput-object v5, v1, Lcom/android/server/power/ShutdownThread;->mCpuWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 283
     :try_start_1
     sget-object v1, Lcom/android/server/power/ShutdownThread;->sInstance:Lcom/android/server/power/ShutdownThread;
 
@@ -830,7 +829,7 @@
 
     move-result-object v3
 
-    const v4, 0x10e001c
+    const v4, #android:integer@config_longPressOnPowerBehavior#t
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -842,7 +841,7 @@
 
     if-eqz v3, :cond_2
 
-    const v2, 0x10400c4
+    const v2, #android:string@reboot_safemode_confirm#t
 
     .line 161
     .local v2, resourceId:I
@@ -898,7 +897,7 @@
 
     if-eqz v3, :cond_4
 
-    const v3, 0x10400c3
+    const v3, #android:string@reboot_safemode_title#t
 
     :goto_2
     invoke-virtual {v4, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
@@ -909,7 +908,7 @@
 
     move-result-object v3
 
-    const v4, 0x1040013
+    const v4, #android:string@yes#t
 
     new-instance v5, Lcom/android/server/power/ShutdownThread$1;
 
@@ -919,7 +918,7 @@
 
     move-result-object v3
 
-    const v4, 0x1040009
+    const v4, #android:string@no#t
 
     const/4 v5, 0x0
 
@@ -932,6 +931,8 @@
     move-result-object v3
 
     sput-object v3, Lcom/android/server/power/ShutdownThread;->sConfirmDialog:Landroid/app/AlertDialog;
+
+    invoke-static/range {p0 .. p0}, Lcom/android/server/power/ShutdownThread$BaiduInjector;->createRebootDialogBaidu(Landroid/content/Context;)V
 
     .line 180
     sget-object v3, Lcom/android/server/power/ShutdownThread;->sConfirmDialog:Landroid/app/AlertDialog;
@@ -982,12 +983,12 @@
 
     if-ne v1, v3, :cond_3
 
-    const v2, 0x10400c2
+    const v2, #android:string@shutdown_confirm_question#t
 
     goto :goto_1
 
     :cond_3
-    const v2, 0x10400c1
+    const v2, #android:string@shutdown_confirm#t
 
     goto :goto_1
 
@@ -995,7 +996,7 @@
     .restart local v0       #closer:Lcom/android/server/power/ShutdownThread$CloseDialogReceiver;
     .restart local v2       #resourceId:I
     :cond_4
-    const v3, 0x10400bc
+    const v3, #android:string@power_off#t
 
     goto :goto_2
 
@@ -1670,4 +1671,52 @@
     move-exception v2
 
     goto/16 :goto_3
+.end method
+
+.method static synthetic access$sget-mReboot-7ffdb3()Z
+    .locals 1
+
+    .prologue
+    sget-boolean v0, Lcom/android/server/power/ShutdownThread;->mReboot:Z
+
+    return v0
+.end method
+
+.method static synthetic access$sput-mReboot-d6390c(Z)Z
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    sput-boolean p0, Lcom/android/server/power/ShutdownThread;->mReboot:Z
+
+    return p0
+.end method
+
+.method static synthetic access$sput-mRebootReason-ba5398(Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    sput-object p0, Lcom/android/server/power/ShutdownThread;->mRebootReason:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method static synthetic access$sget-mRebootSafeMode-6a6402()Z
+    .locals 1
+
+    .prologue
+    sget-boolean v0, Lcom/android/server/power/ShutdownThread;->mRebootSafeMode:Z
+
+    return v0
+.end method
+
+.method static synthetic access$sput-sConfirmDialog-38d6d6(Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
+    .locals 0
+    .parameter "x0"
+
+    .prologue
+    sput-object p0, Lcom/android/server/power/ShutdownThread;->sConfirmDialog:Landroid/app/AlertDialog;
+
+    return-object p0
 .end method

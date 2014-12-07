@@ -86,7 +86,6 @@
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/PhoneProxy;->mResetModemOnRadioTechnologyChange:Z
 
-    .line 85
     new-instance v0, Lcom/android/internal/telephony/OppoIccPhoneBookInterfaceManagerProxy;
 
     invoke-virtual {p1}, Lcom/android/internal/telephony/PhoneBase;->getIccPhoneBookInterfaceManager()Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;
@@ -97,14 +96,13 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/PhoneProxy;->mIccPhoneBookInterfaceManagerProxy:Lcom/android/internal/telephony/IccPhoneBookInterfaceManagerProxy;
 
-    .line 88
-    new-instance v0, Lcom/android/internal/telephony/PhoneSubInfoProxy;
+    new-instance v0, Lcom/android/internal/telephony/BaiduExtPhoneSubInfo;
 
     invoke-virtual {p1}, Lcom/android/internal/telephony/PhoneBase;->getPhoneSubInfo()Lcom/android/internal/telephony/PhoneSubInfo;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/android/internal/telephony/PhoneSubInfoProxy;-><init>(Lcom/android/internal/telephony/PhoneSubInfo;)V
+    invoke-direct {v0, v1}, Lcom/android/internal/telephony/BaiduExtPhoneSubInfo;-><init>(Lcom/android/internal/telephony/PhoneSubInfo;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/PhoneProxy;->mPhoneSubInfoProxy:Lcom/android/internal/telephony/PhoneSubInfoProxy;
 
@@ -2695,7 +2693,7 @@
 
     move-result-object v2
 
-    const v3, 0x10e0034
+    const v3, #android:integer@config_volte_replacement_rat#t
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 

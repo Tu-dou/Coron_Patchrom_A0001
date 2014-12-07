@@ -22,6 +22,9 @@
         Lcom/android/server/BackupManagerService$BackupState;,
         Lcom/android/server/BackupManagerService$BackupRestoreTask;,
         Lcom/android/server/BackupManagerService$ClearDataObserver;,
+	Lcom/android/server/BackupManagerService$ObserveBaiduTransport;,
+        Lcom/android/server/BackupManagerService$BaiduConnection;,
+        Lcom/android/server/BackupManagerService$BaiduBackupInjector;,
         Lcom/android/server/BackupManagerService$TransportConnection;,
         Lcom/android/server/BackupManagerService$RunInitializeReceiver;,
         Lcom/android/server/BackupManagerService$RunBackupReceiver;,
@@ -1866,13 +1869,11 @@
 
     goto :goto_6
 
-    .line 925
     .end local v7           #e:Ljava/lang/Exception;
     .end local v12           #i:I
     :cond_c
     invoke-direct/range {p0 .. p0}, Lcom/android/server/BackupManagerService;->parseLeftoverJournals()V
 
-    .line 928
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/BackupManagerService;->mPowerManager:Landroid/os/PowerManager;
@@ -12449,3 +12450,42 @@
 
     goto :goto_0
 .end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$invoke-backupPasswordMatches-b1d70d(Lcom/android/server/BackupManagerService;Ljava/lang/String;)Z
+#    .locals 1
+#    .parameter "x0"
+#    .parameter "x1"
+#    .prologue
+#    invoke-direct {p0, p1}, Lcom/android/server/BackupManagerService;->backupPasswordMatches(Ljava/lang/String;)Z
+#    move-result v0
+#    return v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$invoke-buildPasswordKey-80a87b(Lcom/android/server/BackupManagerService;Ljava/lang/String;Ljava/lang/String;[BI)Ljavax/crypto/SecretKey;
+#    .locals 1
+#    .parameter "x0"
+#    .parameter "x1"
+#    .parameter "x2"
+#    .parameter "x3"
+#    .parameter "x4"
+#    .prologue
+#    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/BackupManagerService;->buildPasswordKey(Ljava/lang/String;Ljava/lang/String;[BI)Ljavax/crypto/SecretKey;
+#    move-result-object v0
+#    return-object v0
+#.end method
+
+# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
+#.method static synthetic access$invoke-makeKeyChecksum-576893(Lcom/android/server/BackupManagerService;Ljava/lang/String;[B[BI)[B
+#    .locals 1
+#    .parameter "x0"
+#    .parameter "x1"
+#    .parameter "x2"
+#    .parameter "x3"
+#    .parameter "x4"
+#    .prologue
+#    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/BackupManagerService;->makeKeyChecksum(Ljava/lang/String;[B[BI)[B
+#    move-result-object v0
+#    return-object v0
+#.end method
