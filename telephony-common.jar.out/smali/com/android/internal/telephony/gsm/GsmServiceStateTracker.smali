@@ -547,18 +547,6 @@
     return p1
 .end method
 
-.method static synthetic access$002(Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;Z)Z
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 103
-    iput-boolean p1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mIsScreenOn:Z
-
-    return p1
-.end method
-
 .method static synthetic access$200(Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;)V
     .locals 0
     .parameter "x0"
@@ -11999,6 +11987,12 @@
 
     .line 929
     const-string v14, "spn"
+    
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v12}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->updatePlmnOrSpnDisplay(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v12
 
     invoke-virtual {v3, v14, v12}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -12009,6 +12003,12 @@
 
     .line 931
     const-string v14, "plmn"
+    
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v6}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->updatePlmnOrSpnDisplay(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
 
     invoke-virtual {v3, v14, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 

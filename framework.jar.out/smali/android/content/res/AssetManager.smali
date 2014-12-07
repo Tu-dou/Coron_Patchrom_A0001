@@ -188,6 +188,8 @@
 
     invoke-direct {p0}, Landroid/content/res/AssetManager;->init()V
 
+    invoke-static/range {p0 .. p0}, Landroid/content/res/BaiduAssetManager$BaiduMultiThemeInjector;->init(Landroid/content/res/AssetManager;)V
+
     invoke-static {p0}, Landroid/content/res/OppoResourceHelper;->addExtraAssetPaths(Landroid/content/res/AssetManager;)V
 
     return-void

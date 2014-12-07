@@ -51,6 +51,8 @@
 
 .field private mNotificationLightStateDetector:Lcom/android/server/LightsService$LightStateDetector;
 
+.field private mObserver:Lcom/android/server/BatteryService$Led$SettingsObserver;
+
 .field private mScreenOn:Z
 
 .field private mSettingsObservers:[Lcom/android/server/BatteryService$SettingsObserver;
@@ -231,6 +233,8 @@
 
     .line 889
     iput-boolean v6, p0, Lcom/android/server/BatteryService$Led;->mScreenOn:Z
+    
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/BatteryService$Led;->createSettingsObserver()V
 
     .line 891
     return-void
@@ -342,6 +346,16 @@
     .locals 7
 
     .prologue
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/BatteryService$Led;->updateLightsLockedHook()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_baidu_0
+
+    goto :goto_baidu_0
+
+    :cond_baidu_0
+
     const/16 v5, 0x64
 
     const/4 v6, 0x1
@@ -408,6 +422,7 @@
     .line 990
     :cond_0
     :goto_0
+    :goto_baidu_0
     return-void
 
     .line 904

@@ -2399,13 +2399,13 @@
 
     .prologue
     .line 111
-    new-instance v1, Lcom/android/internal/telephony/OppoIccSmsInterfaceManager;
+    new-instance v1, Lcom/android/internal/telephony/IccSmsInterfaceManagerBaidu;
 
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneProxy;->mActivePhone:Lcom/android/internal/telephony/Phone;
 
     check-cast v0, Lcom/android/internal/telephony/PhoneBase;
 
-    invoke-direct {v1, v0}, Lcom/android/internal/telephony/OppoIccSmsInterfaceManager;-><init>(Lcom/android/internal/telephony/PhoneBase;)V
+    invoke-direct {v1, v0}, Lcom/android/internal/telephony/IccSmsInterfaceManagerBaidu;-><init>(Lcom/android/internal/telephony/PhoneBase;)V
 
     iput-object v1, p0, Lcom/android/internal/telephony/PhoneProxy;->mIccSmsInterfaceManager:Lcom/android/internal/telephony/IccSmsInterfaceManager;
 

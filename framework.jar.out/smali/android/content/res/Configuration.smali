@@ -412,6 +412,10 @@
     const/high16 v1, 0x2000
 
     or-int/2addr v0, v1
+    
+    const/high16 v1, -0x8000
+
+    or-int/2addr v0, v1
 
     and-int/2addr v0, p0
 
@@ -867,6 +871,12 @@
     invoke-virtual {v3, v4}, Loppo/content/res/OppoExtraConfiguration;->compareTo(Loppo/content/res/OppoExtraConfiguration;)I
 
     move-result v2
+    
+    if-nez v2, :cond_0
+
+    invoke-static {p0, p1, v2}, Landroid/content/res/Configuration$BaiduInjector;->compareTo(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
+
+    move-result v2
 
     goto/16 :goto_0
 .end method
@@ -1176,6 +1186,10 @@
     or-int/lit16 v0, v0, 0x1000
 
     :cond_12
+    invoke-static {p0, p1, v0}, Landroid/content/res/Configuration$BaiduInjector;->multiTheme_dealThemeChange2(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
+
+    move-result v0
+    
     iget-object v3, p0, Landroid/content/res/Configuration;->mOppoExtraConfiguration:Loppo/content/res/OppoExtraConfiguration;
 
     iget-object v4, p1, Landroid/content/res/Configuration;->mOppoExtraConfiguration:Loppo/content/res/OppoExtraConfiguration;
@@ -1413,6 +1427,10 @@
     iget v2, p0, Landroid/content/res/Configuration;->densityDpi:I
 
     add-int v0, v1, v2
+
+    invoke-static {p0, v1}, Landroid/content/res/Configuration$BaiduInjector;->hashCode(Landroid/content/res/Configuration;I)I
+
+    move-result v1
 
     iget-object v1, p0, Landroid/content/res/Configuration;->mOppoExtraConfiguration:Loppo/content/res/OppoExtraConfiguration;
 
@@ -1682,6 +1700,8 @@
 
     iput v0, p0, Landroid/content/res/Configuration;->seq:I
 
+    invoke-static/range {p0 .. p1}, Landroid/content/res/Configuration$BaiduInjector;->readFromParcel(Landroid/content/res/Configuration;Landroid/os/Parcel;)V
+
     iget-object v0, p0, Landroid/content/res/Configuration;->mOppoExtraConfiguration:Loppo/content/res/OppoExtraConfiguration;
 
     invoke-virtual {v0, p1}, Loppo/content/res/OppoExtraConfiguration;->readFromParcel(Landroid/os/Parcel;)V
@@ -1846,6 +1866,8 @@
 
     iput v0, p0, Landroid/content/res/Configuration;->seq:I
 
+    invoke-static/range {p0 .. p1}, Landroid/content/res/Configuration$BaiduInjector;->setThemeChanged(Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
+
     iget-object v0, p0, Landroid/content/res/Configuration;->mOppoExtraConfiguration:Loppo/content/res/OppoExtraConfiguration;
 
     iget-object v1, p1, Landroid/content/res/Configuration;->mOppoExtraConfiguration:Loppo/content/res/OppoExtraConfiguration;
@@ -1913,6 +1935,8 @@
     iput v1, p0, Landroid/content/res/Configuration;->densityDpi:I
 
     iput v1, p0, Landroid/content/res/Configuration;->seq:I
+
+    invoke-static/range {p0 .. p0}, Landroid/content/res/Configuration$BaiduInjector;->setThemeChangedToDefault(Landroid/content/res/Configuration;)V
 
     iget-object v0, p0, Landroid/content/res/Configuration;->mOppoExtraConfiguration:Loppo/content/res/OppoExtraConfiguration;
 
@@ -2247,6 +2271,8 @@
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     :cond_0
+    invoke-static {p0, v1}, Landroid/content/res/Configuration$BaiduInjector;->appendToString(Landroid/content/res/Configuration;Ljava/lang/StringBuilder;)V
+    
     iget-object v2, p0, Landroid/content/res/Configuration;->mOppoExtraConfiguration:Loppo/content/res/OppoExtraConfiguration;
 
     invoke-virtual {v2}, Loppo/content/res/OppoExtraConfiguration;->toString()Ljava/lang/String;
@@ -3190,6 +3216,10 @@
     iput v2, p0, Landroid/content/res/Configuration;->seq:I
 
     :cond_19
+    invoke-static {p0, p1, v0}, Landroid/content/res/Configuration$BaiduInjector;->multiTheme_dealThemeChange(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
+
+    move-result v0
+    
     iget-object v2, p0, Landroid/content/res/Configuration;->mOppoExtraConfiguration:Loppo/content/res/OppoExtraConfiguration;
 
     iget-object v3, p1, Landroid/content/res/Configuration;->mOppoExtraConfiguration:Loppo/content/res/OppoExtraConfiguration;
@@ -3325,6 +3355,8 @@
     iget v0, p0, Landroid/content/res/Configuration;->seq:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static/range {p0 .. p1}, Landroid/content/res/Configuration$BaiduInjector;->writeToParcel(Landroid/content/res/Configuration;Landroid/os/Parcel;)V
 
     iget-object v0, p0, Landroid/content/res/Configuration;->mOppoExtraConfiguration:Loppo/content/res/OppoExtraConfiguration;
 

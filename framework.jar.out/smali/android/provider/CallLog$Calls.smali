@@ -84,6 +84,10 @@
 
 .field public static final PRESENTATION_UNKNOWN:I = 0x3
 
+.field public static final RECORDPATH:Ljava/lang/String; = "record_url"
+
+.field public static final RINGONCE:Ljava/lang/String; = "ringonce"
+
 .field public static final SUBSCRIPTION:Ljava/lang/String; = "subscription"
 
 .field public static final TYPE:Ljava/lang/String; = "type"

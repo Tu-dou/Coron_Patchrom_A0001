@@ -3898,6 +3898,16 @@
     .end annotation
 
     .prologue
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/NotificationManagerService;->updateLightsLockedHook()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_baidu_0
+
+    goto :goto_baidu_0
+
+    :cond_baidu_0
+
     iget-object v8, p0, Lcom/android/server/NotificationManagerService;->mLights:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I

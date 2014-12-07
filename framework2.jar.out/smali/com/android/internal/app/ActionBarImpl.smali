@@ -3728,22 +3728,3 @@
     .line 1281
     return-void
 .end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$iget-mTabScrollView-4eed9d(Lcom/android/internal/app/ActionBarImpl;)Lcom/android/internal/widget/ScrollingTabContainerView;
-#    .locals 1
-#    .parameter "x0"
-#    .prologue
-#    iget-object v0, p0, Lcom/android/internal/app/ActionBarImpl;->mTabScrollView:Lcom/android/internal/widget/ScrollingTabContainerView;
-#    return-object v0
-#.end method
-
-# Remove the first '#' if you want to enable this method. It might be invoked from codes of BOSP.
-#.method static synthetic access$iput-mCurrentShowAnim-ef88aa(Lcom/android/internal/app/ActionBarImpl;Landroid/animation/Animator;)Landroid/animation/Animator;
-#    .locals 0
-#    .parameter "x0"
-#    .parameter "x1"
-#    .prologue
-#    iput-object p1, p0, Lcom/android/internal/app/ActionBarImpl;->mCurrentShowAnim:Landroid/animation/Animator;
-#    return-object p1
-#.end method

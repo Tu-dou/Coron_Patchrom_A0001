@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/server/BatteryService$BaiduInjector;,
         Lcom/android/server/BatteryService$BatteryListener;,
         Lcom/android/server/BatteryService$Led;,
         Lcom/android/server/BatteryService$SettingsObserver;

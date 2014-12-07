@@ -4967,9 +4967,9 @@
     iput-object p2, p0, Landroid/app/ContextImpl;->mActivityToken:Landroid/os/IBinder;
 
     .line 2072
-    new-instance v0, Landroid/app/ContextImpl$ApplicationContentResolver;
+    new-instance v0, Landroid/app/ContextImpl$BaiduApplicationContentResolver;
 
-    invoke-direct {v0, p0, p3, p6}, Landroid/app/ContextImpl$ApplicationContentResolver;-><init>(Landroid/content/Context;Landroid/app/ActivityThread;Landroid/os/UserHandle;)V
+    invoke-direct {v0, p0, p3, p6}, Landroid/app/ContextImpl$BaiduApplicationContentResolver;-><init>(Landroid/content/Context;Landroid/app/ActivityThread;Landroid/os/UserHandle;)V
 
     iput-object v0, p0, Landroid/app/ContextImpl;->mContentResolver:Landroid/app/ContextImpl$ApplicationContentResolver;
 
@@ -5077,9 +5077,9 @@
     iput-object p2, p0, Landroid/app/ContextImpl;->mMainThread:Landroid/app/ActivityThread;
 
     .line 2082
-    new-instance v0, Landroid/app/ContextImpl$ApplicationContentResolver;
+    new-instance v0, Landroid/app/ContextImpl$BaiduApplicationContentResolver;
 
-    invoke-direct {v0, p0, p2, p3}, Landroid/app/ContextImpl$ApplicationContentResolver;-><init>(Landroid/content/Context;Landroid/app/ActivityThread;Landroid/os/UserHandle;)V
+    invoke-direct {v0, p0, p2, p3}, Landroid/app/ContextImpl$BaiduApplicationContentResolver;-><init>(Landroid/content/Context;Landroid/app/ActivityThread;Landroid/os/UserHandle;)V
 
     iput-object v0, p0, Landroid/app/ContextImpl;->mContentResolver:Landroid/app/ContextImpl$ApplicationContentResolver;
 

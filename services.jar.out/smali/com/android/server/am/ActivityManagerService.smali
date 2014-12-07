@@ -5263,6 +5263,12 @@
 
     invoke-virtual {v0, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, v50
+
+    invoke-direct {v0, v1}, Lcom/android/server/am/ActivityManagerService;->removeIncludeFlags(Landroid/content/Intent;)V
+
     sget-boolean v4, Lcom/android/server/am/ActivityManagerService;->DEBUG_BROADCAST_LIGHT:Z
 
     if-eqz v4, :cond_0
@@ -6949,6 +6955,20 @@
     move-result-object v18
 
     :cond_22
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/android/server/am/ActivityManagerService;->mLruProcesses:Ljava/util/ArrayList;
+
+    move-object/from16 v0, v29
+
+    move-object/from16 v2, v18
+
+    move-object/from16 v3, v50
+
+    move/from16 v6, p14
+
+    invoke-static {v0, v2, v3, v4, v6}, Lcom/baidu/security/bm/BroadcastManagerService;->filterBroadcastReceiver(Ljava/util/List;Ljava/util/List;Landroid/content/Intent;Ljava/util/ArrayList;I)I
+
     invoke-virtual/range {v50 .. v50}, Landroid/content/Intent;->getFlags()I
 
     move-result v4
@@ -7064,6 +7084,12 @@
     invoke-direct/range {v8 .. v26}, Lcom/android/server/am/BroadcastRecord;-><init>(Lcom/android/server/am/BroadcastQueue;Landroid/content/Intent;Lcom/android/server/am/ProcessRecord;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILjava/util/List;Landroid/content/IIntentReceiver;ILjava/lang/String;Landroid/os/Bundle;ZZZI)V
 
     .local v8, r:Lcom/android/server/am/BroadcastRecord;
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
+
+    invoke-static {v4, v8}, Lcom/android/server/am/BaiduBroadcastInjector;->tryHookMessageBroadcast(Landroid/content/Context;Lcom/android/server/am/BroadcastRecord;)V
+    
     sget-boolean v4, Lcom/android/server/am/ActivityManagerService;->DEBUG_BROADCAST:Z
 
     if-eqz v4, :cond_24
@@ -7593,6 +7619,12 @@
     invoke-direct/range {v19 .. v37}, Lcom/android/server/am/BroadcastRecord;-><init>(Lcom/android/server/am/BroadcastQueue;Landroid/content/Intent;Lcom/android/server/am/ProcessRecord;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILjava/util/List;Landroid/content/IIntentReceiver;ILjava/lang/String;Landroid/os/Bundle;ZZZI)V
 
     .restart local v8       #r:Lcom/android/server/am/BroadcastRecord;
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
+
+    invoke-static {v4, v8}, Lcom/android/server/am/BaiduBroadcastInjector;->tryHookMessageBroadcast(Landroid/content/Context;Lcom/android/server/am/BroadcastRecord;)V
+    
     sget-boolean v4, Lcom/android/server/am/ActivityManagerService;->DEBUG_BROADCAST:Z
 
     if-eqz v4, :cond_3b
@@ -22343,7 +22375,7 @@
     move-result-object v1
 
     .local v1, context:Landroid/content/Context;
-    const v4, 0xc030002
+    const v4, #android:style@Theme.DeviceDefault.Light#t
 
     invoke-virtual {v1, v4}, Landroid/content/Context;->setTheme(I)V
 
@@ -73280,7 +73312,7 @@
     invoke-virtual {v3, v0, v1}, Lcom/android/server/am/ActivityStackSupervisor;->ensureActivitiesVisibleLocked(Lcom/android/server/am/ActivityRecord;I)V
 
     :cond_10
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_baidu_0
 
     move-object/from16 v0, p0
 
@@ -73301,7 +73333,7 @@
     :cond_baidu_0
     move-object/from16 v0, p0
 
-    move/from16 v1, v21
+    move/from16 v1, v25
 
     invoke-static {v0, v1}, Lcom/android/server/am/ActivityManagerService$BaiduInjector;->broadcastConfigTheme(Lcom/android/server/am/ActivityManagerService;I)V
 
