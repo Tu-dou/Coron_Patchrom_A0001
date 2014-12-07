@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+
+	<map name="voice_print">
+		<key name="0">
+			<value type="object">
+				<!-- from 0 to 100 -->
+				<integer name="consist_threshold">33</integer>
+				<!-- from 0 to 100 -->	
+				<integer name="text_threshold">135</integer>
+				<string name="text">嗨，小欧助手</string>
+				<integer name="index">1</integer>
+			</value>
+		</key>
+	</map>
+
+</Config>

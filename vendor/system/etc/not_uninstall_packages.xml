@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oppo-package>
+    <LocalVersion>20140613</LocalVersion>
+
+    <NotUninstall>com.android.contacts</NotUninstall>
+    <NotUninstall>com.oppo.blacklist</NotUninstall>
+    <NotUninstall>com.android.providers.contacts</NotUninstall>
+    <NotUninstall>com.android.mms</NotUninstall>
+    <NotUninstall>com.android.providers.telephony</NotUninstall>
+    <NotUninstall>com.android.email</NotUninstall>
+    <NotUninstall>com.android.exchange</NotUninstall>
+    <NotUninstall>com.android.providers.calendar</NotUninstall>
+    <NotUninstall>com.oppo.widget.calendar</NotUninstall>
+    <NotUninstall>com.android.calendar</NotUninstall>
+    <NotUninstall>com.android.settings</NotUninstall>
+    <NotUninstall>com.android.providers.settings</NotUninstall>
+    <NotUninstall>com.oppo.weather</NotUninstall>
+    <NotUninstall>com.oppo.weather.locationservice</NotUninstall>
+    <NotUninstall>com.android.providers.media</NotUninstall>
+    <NotUninstall>com.oppo.music</NotUninstall>
+    <NotUninstall>com.oppo.speechassist</NotUninstall>
+    <NotUninstall>com.oppo.speechassist.engine</NotUninstall>
+    <NotUninstall>com.nearme.feedback</NotUninstall>
+    <NotUninstall>com.nearme.feedbackservice</NotUninstall>
+    <NotUninstall>com.oppo.backuprestore</NotUninstall>
+    <NotUninstall>com.android.backupconfirm</NotUninstall>
+    <NotUninstall>com.oppo.backuprestore.remoteservice</NotUninstall>
+
+</oppo-package>

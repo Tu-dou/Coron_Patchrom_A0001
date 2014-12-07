@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<gs>
+    <p att="com.android.email"></p>
+    <p att="com.android.contacts"></p>
+    <p att="com.android.mms"></p>
+    <p att="com.oppo.blacklist"></p>
+    <p att="com.UCMobile"></p>
+    <p att="com.qihoo.browser"></p>
+    <p att="com.baidu.browser.apps"></p>
+    <p att="sogou.mobile.explorer"></p>
+    <p att="com.oupeng.mini.android"></p>
+    <p att="com.jiubang.goscreenlock"></p>    
+    <p att="com.nd.android.pandareader"></p>
+    <p att="com.imangi.templerunzh"></p>
+    <p att="com.imangi.templerun"></p>
+    <p att="com.imangi.templerun2"></p>
+    <p att="com.imangi.templerun2.paid"></p>
+    <p att="com.kiloo.subwaysurf.full"></p>
+    <p att="com.kiloo.subwaysurf"></p>
+    <p att="com.kiloo.subwaysurferyouxi"></p>
+    <p att="com.netease.pris"></p>
+    <p att="com.ophone.reader.ui"></p>
+    <p att="com.qq.reader"></p>
+    <p att="com.baidu.yuedu"></p>
+    <p att="com.oppo.reader"></p>
+    <p att="com.android.browser"></p>
+</gs>

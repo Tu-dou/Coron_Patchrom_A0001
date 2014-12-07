@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config>
+
+    <integer name="area_left_margin">44</integer>
+    <integer name="area_top_margin">0</integer>
+    <integer name="area_right_margin">44</integer>
+    <integer name="area_bottom_margin">0</integer>
+    <integer name="area_height">775</integer>
+
+</Config>

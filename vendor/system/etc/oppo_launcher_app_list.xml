@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <app en_name="Launcher"    cn_name="桌面"    tw_name="桌布"    switch="launcher.log.switch"    ext_int="0"/>
+
+    <app en_name="Launcher.LiveWeather"   cn_name="桌面(自由天气框架)"   tw_name="桌布(自由天氣框架)"    switch="launcher.liveweather.log.switch"   ext_int="0"/>
+
+    <app en_name="Launcher.LauncherModel"    cn_name="桌面(数据加载)"    tw_name="桌布(數據加載)"    switch="launcher.launchermodel.log.switch"    ext_int="0"/>
+
+    <app en_name="PrivateMoodAlbum"    cn_name="心情相册"    tw_name="心情相簿"    switch="privatemoodalbum.log.switch"    ext_int="0"/>
+
+    <app en_name="PrivateMusicPage"    cn_name="心情音乐"    tw_name="心情音樂"    switch="privatemusicpage.log.switch"    ext_int="0"/>
+
+    <app en_name="Weather(Widget)"    cn_name="天气插件"    tw_name="天氣插件"    switch="weatherwidget.log.switch"    ext_int="0"/>
+</resources>

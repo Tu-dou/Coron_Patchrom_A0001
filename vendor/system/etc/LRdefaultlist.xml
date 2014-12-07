@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<gs>
+    <p att="com.zhangyue.iReader.read.ui.Activity_BookBrowser_TXT"></p>
+    <p att="viva.android.player.VPlayerActivity"></p>
+    <p att="com.nd.android.pandareader.bookread.text.TextViewerActivity"></p>
+    <p att="com.netease.pris.activity.ReadBookActivity"></p>
+    <p att="com.baidu.yuedu.reader2.ui.XBookActivity"></p>
+    <p att="com.baidu.yuedu.ui.XBookActivity"></p>
+    <p att="com.cmread.bplusc.reader.book.BookReader"></p>
+    <p att="com.qq.reader.ReaderPage"></p>
+    <p att="com.duokan.reader.DkMainActivity"></p>
+    <p att="com.netease.nr.phone.main.MainActivity"></p>
+    <p att="com.alensw.PicFolder.GalleryActivity"></p>
+    <p att="com.myzaker.ZAKER_Phone.view.boxview.BoxViewActivity"></p>
+    <p att="com.myzaker.ZAKER_Phone.view.article.ArticleListFragmentActivity"></p>
+    <p att="com.myzaker.ZAKER_Phone.view.article.ArticleContentActivity"></p>
+    <p att="com.myzaker.ZAKER_Phone.view.feature.FeatureContentActivity"></p>
+    <p att="com.baidu.news.ui.NewsDetailActivity"></p>
+    <p att="com.baidu.news.ui.SmartNewsActivity"></p>
+    <p att="com.meilishuo.app.activity.ItemFlipActivity"></p>
+    <p att="com.meilishuo.app.activity.MainActivity"></p>
+    <p att="com.oppo.reader"></p>
+</gs>

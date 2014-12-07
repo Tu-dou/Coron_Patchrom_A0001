@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <app en_name="Photos"  cn_name="相册"   tw_name="相簿"   switch="Photos.log.switch"  ext_int="0"/>
+
+    <app en_name="Video"      cn_name="视频"    tw_name="視訊"     switch="Video.log.switch"      ext_int="0"/>
+
+    <app en_name="Music"   cn_name="音乐"   tw_name="音樂"   switch="Music.log.switch"    ext_int="0"/>
+
+    <app en_name="Recordings"    cn_name="录音"  tw_name="錄音" switch="Recordings.log.switch"     ext_int="0"/>
+</resources>

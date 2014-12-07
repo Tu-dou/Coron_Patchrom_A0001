@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <app en_name="Contact"  cn_name="电话本"   tw_name="通訊錄"   switch="contact.log.switch"  ext_int="0"/>
+
+    <app en_name="Mms"      cn_name="短信"    tw_name="簡訊"     switch="Mms.log.switch"      ext_int="0"/>
+
+    <app en_name="Dialer"   cn_name="拨号盘"   tw_name="撥號盤"   switch="dialer.log.switch"    ext_int="0"/>
+
+    <app en_name="Email"    cn_name="电子邮件"  tw_name="電子郵件" switch="email.log.switch"     ext_int="0"/>
+
+    <app en_name="Phone"    cn_name="通话"     tw_name="通話"    switch="phone.log.switch"     ext_int="0"/>
+</resources>
